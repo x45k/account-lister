@@ -1,7 +1,8 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const axios = require('axios');
+require('dotenv')
 const Hypixel = require('hypixel-api-reborn');
-const hypixel = new Hypixel.Client("e352af11-4330-43bc-aaa7-8318f9f6fcd3");
+const hypixel = new Hypixel.Client(process.env.API_KEY);
 
 module.exports = {
     data: new SlashCommandBuilder()
